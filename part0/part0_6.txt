@@ -1,5 +1,5 @@
 browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
-server-->browser: HTML-code, HTTP status code 200
+server-->browser: HTML-code, HTTP status code 201
 browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa
 server-->browser: HTML-code, HTTP status code 200
 browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
