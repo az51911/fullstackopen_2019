@@ -34,6 +34,9 @@ const Part = props => {
 };
 
 const Content = props => {
+    props.parts.forEach(element => {
+        
+    });
     return (
         <div>
             <Part name={props.parts[0].name} values={props.parts[0].value} />
