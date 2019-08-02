@@ -1,12 +1,12 @@
 import React from "react";
 
-const Persons = ({ persons_info, search_string }) => {
+const Persons = ({ persons_info, search_string, DeletePersonButton }) => {
     let showAll = search_string === "";
 
-    const Person = ({ name, number }) => {
+    const Person = ({id,name,number}) => {
         return (
             <div>
-                {name} {number}
+                {name} {number}  <button onClick={() => { DeletePersonButton(id)}}> delete </button>
             </div>
         );
     };
@@ -17,10 +17,11 @@ const Persons = ({ persons_info, search_string }) => {
             person.name.toUpperCase().includes(search_string.toUpperCase())
         );
 
-    const entries = () =>
+    const entries = () => 
         PeopleToShow.map(person => (
-            <Person key={person.name} name={person.name} number={person.number} />
-        ));
+        <Person key={person.id} id={person.id} name={person.name} number={person.number} /> )
+    );
+
     return <div>{entries()}</div>;
 };
 
