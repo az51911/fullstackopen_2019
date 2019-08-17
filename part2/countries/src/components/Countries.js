@@ -17,7 +17,7 @@ const ListLanguages = ({ input_country_languages }) => {
 const DisplayFlag = ({ input_country }) => {
     return <img src={input_country} alt="" height="90" width="150" />;
 };
-
+/*
 const GetWeather = (capital_city, setWeatherFunction) => {
     console.log("target capital city outside useeffect is", capital_city);
     useEffect(() => {
@@ -34,6 +34,7 @@ const GetWeather = (capital_city, setWeatherFunction) => {
     }, [capital_city, setWeatherFunction]);
     console.log("target weather is returned");
 };
+*/
 
 const DisplayWeather = ({ targetweather }) => {
     console.log("targetweather to display is", targetweather);

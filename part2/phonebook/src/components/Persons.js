@@ -4,6 +4,9 @@ const Persons = ({ persons_info, search_string, DeletePersonButton }) => {
     let showAll = search_string === "";
 
     const Person = ({id,name,number}) => {
+        console.log(id)
+        console.log(name)
+        console.log(number)
         return (
             <div>
                 {name} {number}  <button onClick={() => { DeletePersonButton(id)}}> delete </button>
@@ -18,9 +21,12 @@ const Persons = ({ persons_info, search_string, DeletePersonButton }) => {
         );
 
     const entries = () => 
-        PeopleToShow.map(person => (
-        <Person key={person.id} id={person.id} name={person.name} number={person.number} /> )
+        PeopleToShow.map(person => 
+            (
+                <Person key={person.id} id={person.id} name={person.name} number={person.number} /> 
+            )
     );
+    
 
     return <div>{entries()}</div>;
 };
